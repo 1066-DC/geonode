@@ -227,7 +227,7 @@ _DEFAULT_LANGUAGES = """(
     ('sk', 'Slovensky'),
 )"""
 
-LANGUAGES = ast.literal_eval(os.getenv("LANGUAGES", _DEFAULT_LANGUAGES))
+LANGUAGES=(('en-us','English'), ('lo-la','Lao'))
 
 EXTRA_LANG_INFO = {
     "am": {
@@ -257,10 +257,14 @@ EXTRA_LANG_INFO = {
     "lo": {
         "bidi": False,
         "code": "lo",
-        "name": "Laos",
-        "name_local": "Laos",
+        "name": "Lao",
+        "name_local": "ລາວ",
     },
 }
+
+import django.conf.locale
+LANG_INFO = dict(django.conf.locale.LANG_INFO, **EXTRA_LANG_INFO)
+django.conf.locale.LANG_INFO = LANG_INFO
 
 AUTH_USER_MODEL = os.getenv("AUTH_USER_MODEL", "people.Profile")
 
