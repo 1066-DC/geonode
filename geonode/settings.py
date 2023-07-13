@@ -1534,12 +1534,12 @@ if GEONODE_CLIENT_LAYER_PREVIEW_LIBRARY == "mapstore":
     if MAPBOX_ACCESS_TOKEN:
         BASEMAP = {
             "type": "tileprovider",
-            "title": "MapBox streets-v11",
+            "title": "MapBox satellite-streets-v11",
             "provider": "MapBoxStyle",
-            "name": "MapBox streets-v11",
+            "name": "MapBox satellite-streets-v11",
             "accessToken": f"{MAPBOX_ACCESS_TOKEN}",
-            "source": "streets-v11",
-            "thumbURL": f"https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/256/6/33/23?access_token={MAPBOX_ACCESS_TOKEN}",  # noqa
+            "source": "satellite-streets-v11",
+            "thumbURL": f"https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v11/tiles/256/6/33/23?access_token={MAPBOX_ACCESS_TOKEN}",  # noqa
             "group": "background",
             "visibility": True,
         }
