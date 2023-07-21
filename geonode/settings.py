@@ -1566,12 +1566,7 @@ if GEONODE_CLIENT_LAYER_PREVIEW_LIBRARY == "mapstore":
     MAPSTORE_BASELAYERS_SOURCES = os.environ.get("MAPSTORE_BASELAYERS_SOURCES", {})
 
     MAPSTORE_DEFAULT_LANGUAGES = (
-        ("de-de", "Deutsch"),
         ("en-us", "English"),
-        ("es-es", "Español"),
-        ("fr-fr", "Français"),
-        ("it-it", "Italiano"),
-        ("th-th", "Thai"),
         ("lo-la", "Lao"),
     )
 
